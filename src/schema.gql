@@ -17,8 +17,11 @@ scalar DateTime
 
 type Query {
   post(id: Float!): Post
+  posts: [Post!]
 }
 
 type Mutation {
   createPost(title: String!, content: String!): Post
+  updatePost(id: Float!, title: String!, content: String!): Post
+  deletePost(id: Float!): Post
 }
